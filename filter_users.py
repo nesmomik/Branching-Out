@@ -3,6 +3,7 @@ import json
 FILENAME = "users.json"
 
 def filter_users_by_name(name):
+    """prints all data of users that match the given name in the json data of file FILENAME"""
     with open(FILENAME, "r") as file:
         users = json.load(file)
 
@@ -13,6 +14,7 @@ def filter_users_by_name(name):
 
 
 def filter_users_by_age(age):
+    """prints all data of users that match the given age in the json data of file FILENAME"""
     with open(FILENAME, "r") as file:
         users = json.load(file)
 
@@ -23,6 +25,7 @@ def filter_users_by_age(age):
 
 
 def filter_users_by_email(email):
+    """prints all data of users that match the given email address in the json data of file FILENAME"""
     with open(FILENAME, "r") as file:
         users = json.load(file)
 
@@ -32,6 +35,7 @@ def filter_users_by_email(email):
         print(user)
 
 def main(): 
+    """Allows to filter json formatted data in file with name FILENAME by name, age or email-address"""
     filter_option = (
         input("What would you like to filter by? ('name', 'age', 'email'): ").strip().lower()
     )
